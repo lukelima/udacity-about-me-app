@@ -8,32 +8,32 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import com.example.aboutme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var doneButton: Button
-    lateinit var nicknameEditText: EditText
-    lateinit var nicknameTextView: TextView
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        doneButton = findViewById(R.id.done_button)
-        nicknameEditText = findViewById(R.id.nickname_edit)
-        nicknameTextView = findViewById(R.id.nickname_text)
-        doneButton.setOnClickListener { addNickName(it) }
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.doneButton.setOnClickListener { addNickName(it) }
     }
 
     private fun addNickName(view: View) {
-        nicknameTextView.text = nicknameEditText.text
+        binding.nicknameText.text = binding.nicknameEdit.text
         changeVisibilities()
         hideKeyboard(view)
     }
 
     private fun changeVisibilities() {
-        doneButton.visibility = View.GONE
-        nicknameEditText.visibility = View.GONE
-        nicknameTextView.visibility = View.VISIBLE
+        binding.apply {
+            invalidateAll()
+            binding.doneButton.visibility = View.GONE
+            binding.nicknameEdit.visibility = View.GONE
+            binding.nicknameText.visibility = View.VISIBLE
+        }
     }
 
     private fun hideKeyboard(view: View) {
