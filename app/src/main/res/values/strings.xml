@@ -9,4 +9,5 @@
         Donec porttitor, elit et lobortis pretium, odio est tincidunt lacus, eget euismod mauris justo nec neque. Fusce tempor ac eros a semper. Ut aliquet erat ac luctus elementum. Fusce vulputate lectus ipsum, id vestibulum libero finibus a. Nunc iaculis mi diam, ullamcorper scelerisque velit tempor cursus. Suspendisse condimentum id lorem in molestie. In at efficitur tellus, eu commodo quam. Suspendisse posuere blandit consectetur. Donec et massa mattis tortor cursus hendrerit. Aliquam erat volutpat. Praesent non sem libero. Donec sagittis enim eu facilisis lacinia. Quisque eu diam non ex euismod sollicitudin eu at risus. Aliquam tempor, metus in laoreet tristique, massa nibh bibendum elit, sed tincidunt lacus sem sed nunc.
     </string>
     <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="done_button_text">Done</string>
 </resources>
